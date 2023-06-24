@@ -10,8 +10,8 @@ int find_divisor(long int num)
 
 	if (num % 2 == 0)
 	{
-		printf("%lu = %lu * 2\n", num, num / 2);
-		return (2);
+		printf("%lu = %lu * %d\n", num, num / 2, 2);
+		return (0);
 	}
 
 	factor = 3;
@@ -19,15 +19,12 @@ int find_divisor(long int num)
 	{
 		if (num % factor == 0)
 		{
-			 printf("%lu = %lu * %lu\n", num, num / factor, factor);
-			 return (factor);
+			printf("%lu = %lu * %lu\n", num, num / factor, factor);
+			return (0);
 		}
-		else
-		{
-			factor += 2;
-		}
+		factor += 2;
 	}
 
-	printf("%lu = %lu * 1\n", num, num);
+	printf("%lu = %lu * %d\n", num, num, 1);
 	return (0);
 }
